@@ -35,3 +35,5 @@ There are two data frames created by the code and two equivalent .csv files stor
 * 67962
 * R version 3.1.3 (2015-03-09)
 * Smooth Sidewalk
+
+Refer to CodeBook.doc forfurther details
