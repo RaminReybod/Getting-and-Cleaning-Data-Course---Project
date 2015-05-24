@@ -21,19 +21,19 @@ There are two data frames created by the code and two equivalent .csv files stor
 
 ## Code profile:
 * Developed in R Studio 0.98
-* Platform (using output of version function):
-* i386-w64-mingw32
-* i386
-* mingw32
-* i386, mingw32
+Platform (using output of version function):
+i386-w64-mingw32
+i386
+mingw32
+i386, mingw32
 
-* 3
-* 1.3
-* 2015
-* 03
-* 09
-* 67962
-* R version 3.1.3 (2015-03-09)
-* Smooth Sidewalk
+3
+1.3
+2015
+03
+09
+67962
+R version 3.1.3 (2015-03-09)
+Smooth Sidewalk
 
-Refer to CodeBook.doc forfurther details
+## Refer to CodeBook.doc forfurther details
