@@ -20,19 +20,18 @@ There are two data frames created by the code and two equivalent .csv files stor
 *	final_train_test_summary: Aggregated data set with average of all measurement 
 
 ## Code profile:
-Developed in R Studio 0.98
-Platform (using output of version function):
-i386-w64-mingw32
-i386
-mingw32
-i386, mingw32
+* Developed in R Studio 0.98
+* Platform (using output of version function):
+* i386-w64-mingw32
+* i386
+* mingw32
+* i386, mingw32
 
-3
-1.3
-2015
-03
-09
-67962
-R
-R version 3.1.3 (2015-03-09)
-Smooth Sidewalk
+* 3
+* 1.3
+* 2015
+* 03
+* 09
+* 67962
+* R version 3.1.3 (2015-03-09)
+* Smooth Sidewalk
