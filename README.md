@@ -36,4 +36,4 @@ i386, mingw32
 R version 3.1.3 (2015-03-09)
 Smooth Sidewalk
 
-## Refer to CodeBook.doc in this repository for further details.
+Refer to CodeBook.doc in this repository for further details.
