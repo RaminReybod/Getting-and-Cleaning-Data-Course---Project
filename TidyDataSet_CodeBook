@@ -1,24 +1,48 @@
 # Code Book
 This document describes the code inside run_analysis.R.
-Purpose: The code processes a number of individual but related data files related to six different physical activities of 30 volunteers captured by Samsung Galaxy S II smartphone. The purpose of the code is to read and organize the data elements stored in several files into one tidy data set (and one summarized data set) which are easy to read, interpret and process by further analysis on certain characteristics of the experiment. 
+Purpose: The code processes a number of individual but related data files related to six different physical activities of 30 
+
+volunteers captured by Samsung Galaxy S II smartphone. The purpose of the code is to read and organize the data elements 
+
+stored in several files into one tidy data set (and one summarized data set) which are easy to read, interpret and process by 
+
+further analysis on certain characteristics of the experiment. 
 
 Study Design
-The details of the input data can be found at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The details of the input data can be found at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using
 
-The information is basically about several measurements (561 variables) sensed and recorded by the smartphone for each individual (30 instances) and each type of activity (6 different activities).
-The code will filter the 561 measurements to 66 variables (related to only mean and standard deviation values of certain variables) and provides a more readable and compiled version of the data.
++Smartphones
+
+The information is basically about several measurements (561 variables) sensed and recorded by the smartphone for each 
+
+individual (30 instances) and each type of activity (6 different activities).
+The code will filter the 561 measurements to 66 variables (related to only mean and standard deviation values of certain 
+
+variables) and provides a more readable and compiled version of the data.
  
 Input: 8 individual data sets as described in the link above and summarized below:
-Two files (features.txt and activity_labels.txt) are storing description of the coded variables in other six files. So they can be considered as “Reference” data.
-Six files are grouped into two groups: Three files for Train data and three files for Test data. The structure for each corresponding file for both train and test files are identical. However the contents are not. Train data sets are related to the data captured as “train” data set for 21 individuals and Test data sets are related to the data captured as “test” data set for 9 other individuals. 
+Two files (features.txt and activity_labels.txt) are storing description of the coded variables in other six files. So they 
+
+can be considered as “Reference” data.
+Six files are grouped into two groups: Three files for Train data and three files for Test data. The structure for each 
+
+corresponding file for both train and test files are identical. However the contents are not. Train data sets are related to 
+
+the data captured as “train” data set for 21 individuals and Test data sets are related to the data captured as “test” data 
+
+set for 9 other individuals. 
 
 Output: There are two data frames created by the code and two equivalent .csv files stored in the working directory
 •	final_train_test: Subject and activity level data for both train and test data
 •	final_train_test_summary: Aggregated data set with average of all measurement 
 
 A summary about the information:
-Table below displays the frequency of combination of Type (train/test), subject (individual code) and activity (six different activities) for the resulting data set. Freq = 0 is filtered.
-One interesting observation is that for various subjects only one activity is captured. And only a few number of subjects have 2 activities captured (for example subject 6 has two activities as “WALKING” and “WALKING_UPSTAIRS”.
+Table below displays the frequency of combination of Type (train/test), subject (individual code) and activity (six different 
+
+activities) for the resulting data set. Freq = 0 is filtered.
+One interesting observation is that for various subjects only one activity is captured. And only a few number of subjects 
+
+have 2 activities captured (for example subject 6 has two activities as “WALKING” and “WALKING_UPSTAIRS”.
 
 Note: This table can be created by the code below running on the output data set created:
 
@@ -125,11 +149,29 @@ Data Dictionary of the output data sets:
 o	Two groups of columns are produced:
 	Factor variables indicating the observation categorical info:
 •	type: Indicator of “Train” or “Test” as per source of the observation. Possible values: Train, Test
-•	subject: the “id” of the subject (volunteer individual participating in the experiment) – possible values are 1 to 30 indicating 30 distinct participants. The value is directly copied from the source
-•	activity_id: the “id” of the activity (activity type code) – possible values are 1 to 6 indicating any of six possible activities captured by the device. The value is directly copied from the source
-•	activity_desc: descriptive value of the coded activity (corresponding to activity_id). Possible values are description of 1 to 6 activities such as “WALKING”, “LAYING”, etc.
-•	66 variables as measures associated with each observation. The values are directly moved from source. Values are real numbers with the range of [-1,1]. These 66 variables are categorized into “mean” and “standard deviation” pairs. Therefore for each 33 measurements there is a pair of values one as mean value and one as standard deviation of the measurement for a particular aspect of an activity. 
+•	subject: the “id” of the subject (volunteer individual participating in the experiment) – possible values are 1 to 30 
+
+indicating 30 distinct participants. The value is directly copied from the source
+•	activity_id: the “id” of the activity (activity type code) – possible values are 1 to 6 indicating any of six 
+
+possible activities captured by the device. The value is directly copied from the source
+•	activity_desc: descriptive value of the coded activity (corresponding to activity_id). Possible values are 
+
+description of 1 to 6 activities such as “WALKING”, “LAYING”, etc.
+•	66 variables as measures associated with each observation. The values are directly moved from source. Values are real 
+
+numbers with the range of [-1,1]. These 66 variables are categorized into “mean” and “standard deviation” pairs. Therefore 
+
+for each 33 measurements there is a pair of values one as mean value and one as standard deviation of the measurement for a 
+
+particular aspect of an activity. 
 
 •	final_train_test_summ
-o	This data set is a summary of final_train_test grouping the data into “subject” and the “activity” reporting the mean of all 66 measuring variables for each combination of groups (e.g. subject 2 and activity WALKING, subject 17 and activity SITTING, etc.). Therefore the data set has the same number of numeric measurement columns but the values are now the mean of the group.
+o	This data set is a summary of final_train_test grouping the data into “subject” and the “activity” reporting the mean 
+
+of all 66 measuring variables for each combination of groups (e.g. subject 2 and activity WALKING, subject 17 and activity 
+
+SITTING, etc.). Therefore the data set has the same number of numeric measurement columns but the values are now the mean of 
+
+the group.
 o	The data set has 40 records indicating 40 distinct groups of “subject”, “activity” pair.
