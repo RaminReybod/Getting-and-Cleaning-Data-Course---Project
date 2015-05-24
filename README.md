@@ -16,6 +16,6 @@ set for 9 other individuals.
 
 ## Output:
 There are two data frames created by the code and two equivalent .csv files stored in the working directory
-•	final_train_test: Subject and activity level data for both train and test data
-•	final_train_test_summary: Aggregated data set with average of all measurement 
+* final_train_test: Subject and activity level data for both train and test data
+*	final_train_test_summary: Aggregated data set with average of all measurement 
 
