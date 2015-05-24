@@ -1,5 +1,3 @@
-# Tidy Data Sets Code Book
-
 # Code Book
 This document describes the code inside run_analysis.R.
 Purpose: The code processes a number of individual but related data files related to six different physical activities of 30 volunteers captured by Samsung Galaxy S II smartphone. The purpose of the code is to read and organize the data elements stored in several files into one tidy data set (and one summarized data set) which are easy to read, interpret and process by further analysis on certain characteristics of the experiment. 
